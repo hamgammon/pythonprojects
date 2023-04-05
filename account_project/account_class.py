@@ -1,6 +1,7 @@
 #create the class called 'Account'
 class Account:
 
+#look over classes again - no idea wtf I am doing
 #tip - class var for a auto incament id.  
     __account_id_next = 1 #make it 1 and add one for each new a/c? for auto inc (come back to this)
 
@@ -12,6 +13,8 @@ class Account:
         self.balance = balance
         
 #PRODUCTION - Add name- use a setter to check name is correct length - also raise a runtime error to inform the user that its wrong in to between 4 and 15 chars.
+#I am also not using the right classes/type
+
     @property
     def name(self):
         return self._name
@@ -24,7 +27,7 @@ class Account:
             else:
                 self._name = value
         finally:
-            print('***test message finally***')
+            print('\nPlease try again') # tidy up later - its late, I am not sure I do this is classes?
 
 ####-- Depostit and Withdraw methods------------------------------------------------------------------
 #need to add and withdraw money "methods" - (confirm termonolgy again)

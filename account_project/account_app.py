@@ -19,17 +19,22 @@ while True:
     
     #Create an account - need to check that errors are being handled as per spec doc 
     if choice == "1":
-        #capture details from the user - name and starting balance
-        name = input("Enter name (4-15 characters): ")
-        #do i check the 4-15 requirement here?? i think in class
-        balance = float(input("Enter initial balance: "))
-        #details in
-        account = Account(name, balance)
-        accounts[account._account_id] = account
+        try:
+            #capture details from the user - name and starting balance
+            name = input("Enter name (4-15 characters): ")
+            #do i check the 4-15 requirement here?? i think in class
+            balance = float(input("Enter initial balance: "))
+            #details in
+            account = Account(name, balance)
+            accounts[account._account_id] = account
 
-        #New account created message showing ID to user
-        print(f"\n***{account._name} your account has been created with ID {account._account_id} ***")
-        print(f"***Please use this ID for future transactions on your account.***")
+            #New account created message showing ID to user
+            print(f"\n***{account._name} your account has been created with ID {account._account_id} ***")
+            print(f"***Please use this ID for future transactions on your account.***")
+        
+        except RuntimeError as e:
+
+            print('Please enter a name with the correct length')
     
     #Exisiting Accounts menu option
     elif choice == "2":
