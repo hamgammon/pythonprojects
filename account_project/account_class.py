@@ -13,7 +13,7 @@ class Account:
         self.balance = balance
         
 #PRODUCTION - Add name- use a setter to check name is correct length - also raise a runtime error to inform the user that its wrong in to between 4 and 15 chars.
-#I am also not using the right classes/type
+#I am also not using the right classes/type for 
 
     @property
     def name(self):
@@ -34,9 +34,6 @@ class Account:
 #Deposit - Action of adding money to an account - Check account_id and add money to it.
 #Withdrawal - Action of subtracting money from an account      
 
-    # @property
-    # def balance(self) -> float:
-    #     return self.__balance
     
     #Deposit - Action of adding money to an account - Check account_id and add money to the existing balance of account.
 
